@@ -1,0 +1,10 @@
+void setup(){
+  Serial.begin(9600);
+  analogRead(A0);   //the sensor'll be connected to the a0 arduino pin
+}
+void loop(){
+  float pre = analogRead(A0);
+  float pressione=pre/1024*25;
+  Serial.print(pressione);
+  delay(500); 
+}
