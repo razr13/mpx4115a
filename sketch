@@ -3,8 +3,9 @@ void setup(){
   analogRead(A0);   //the sensor'll be connected to the a0 arduino pin
 }
 void loop(){
-  float pre = analogRead(A0);
-  float pressione=pre/1024*25;
-  Serial.print(pressione);
-  delay(500); 
+  int Time=0; //insert the time refresh of the reading in millisecond 
+  float pre = analogRead(A0); 
+  float pressure=pre/1024*25;   //That's the formula directly from the datasheet
+  Serial.print(pressure);
+  delay(Time); 
 }
